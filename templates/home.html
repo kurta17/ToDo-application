@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>HEllop</h1>
-    
-    
+{% extends "layout.html" %}
 
-</body>
-</html>
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+    <h1 class="display-3 text-center ">Welcome to the To-Do List App, {{ greeting }}</h1>
+    <h2 class="display-4 text-center">Manage Your Tasks with Ease</h2>
+    <p class="lead text-center">Your tasks organized in one place, accessible anywhere.</p>
+    <a href="{{ url_for('to_do_list') }}" class="btn btn-primary btn-lg d-block mx-auto">Get Started</a>
+
+{% endblock %}
